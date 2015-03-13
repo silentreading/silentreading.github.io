@@ -54,7 +54,7 @@ $.getJSON(calendar_json_url, function(data) {
         
         
       
-      $('#events').append('<li><h3>' + item.summary + '</h3><h4>' + datetimeHelper(item.start.dateTime) + '</em> &#124; <em>' + item.location + '</h4><p>' + item.description + '</p></li>');   
+      $('#events').append('<li><h3>' + item.summary + '</h3><h4>' + datetimeHelper(item.start.dateTime) + ' &#124; ' + item.location + '</h4><p>' + item.description + '</p></li>');   
     });
 });
 
