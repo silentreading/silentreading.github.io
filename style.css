@@ -4,6 +4,36 @@ body {
     color: #303030;
 }
 
+
+h1 {font-family: 'Arvo', serif;
+	font-size: 80px;
+margin: 0;
+    padding: 0;}
+
+h2 {font-family: 'Arvo', serif;
+	font-size: 20px
+	}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+    color: #303030;
+    text-decoration: none;
+    margin-right: 20px;
+  
+}
+
+
 #wrap {
 	width:1000px;
 }
@@ -13,14 +43,7 @@ body {
 	float:left;
 }
 
-#calendar {
+#events {
 	width:37%;
 	float:right;
 }
-
-h1 {font-family: 'Arvo', serif;
-	font-size: 80px}
-
-h4 {font-family: 'Arvo', serif;
-	font-size: 20px
-	}
