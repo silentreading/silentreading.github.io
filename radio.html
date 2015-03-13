@@ -4,7 +4,7 @@
 	<title>Silent Reading</title>
 	<link href='http://fonts.googleapis.com/css?family=Arvo:700|Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
 <div id="wrap">
@@ -13,7 +13,7 @@
 
 <div id="nav">
 <ul>
-  <li><a href="about.html">ABOUT</a></li>
+  <li><a href="index.html">ABOUT</a></li>
   <li><a href="radio.html">RADIO</a></li>
   <li><a href="#">MUSIC</a></li>
 </ul>
@@ -26,10 +26,51 @@
 
 <div id="events">
 <h2>UPCOMING EVENTS</h2>
-
-April 2: Synth-Pop Night at The Whistler
-</div>
+<ul id="events"></ul>
 
 </div>
+
+</div>
+
+<script type="text/javascript">
+var API_key = 'AIzaSyCO6Xii2CIVBd18g2-YsM3LcazD6CXLn-g';
+
+var calendar_base_url = 'https://www.googleapis.com/calendar/v3/calendars/';
+
+var calendar_ID = '6q1k9rf46qjruepg4dq9d5bu28%40group.calendar.google.com';
+
+var now = new Date().toISOString();
+
+var calendar_json_url = calendar_base_url + calendar_ID + '/events?singleEvents=true&orderBy=startTime&timeMin=' + now + '&maxResults=5&key=' + API_key;
+
+$.getJSON(calendar_json_url, function(data) {
+    $.each(data.items, function(i, item){
+        
+        
+        
+      
+      $('#events').append('<li><h3>' + item.summary + '</h3><h4>' + datetimeHelper(item.start.dateTime) + '</em> &#124; <em>' + item.location + '</h4><p>' + item.description + '</p></li>');   
+    });
+});
+
+function datetimeHelper(datetime) {  
+    var date_obj = new Date(datetime);
+    
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    
+    var day = days[date_obj.getDay()];
+    var month = months[date_obj.getMonth()];
+    var date = date_obj.getDate();
+    var hours = (date_obj.getHours() < 12) ? date_obj.getHours() : date_obj.getHours() - 12;
+    var minutes = (date_obj.getMinutes() > 10) ? date_obj.getMinutes() : '0' + date_obj.getMinutes().toString();
+    var ampm = (date_obj.getHours() < 12) ? 'am' : 'pm';
+    
+    var datestring = day + ', ' + month + ' ' + date + ' at ' + hours + ':' + minutes + ' ' + ampm;
+        
+    return datestring;
+}
+</script>
+
 </body>
 </html>
