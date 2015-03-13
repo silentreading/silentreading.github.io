@@ -11,27 +11,50 @@ margin: 0;
     padding: 0;}
 
 h2 {font-family: 'Arvo', serif;
-	font-size: 20px
+	font-size: 25px
 	}
 
-ul {
+h3 {font-family: 'Arvo', serif;
+	font-size: 15px
+	}
+
+h4 {font-family: 'Sanchez', serif;
+	font-style: italic;
+	font-size: 12px;
+	}
+
+
+#nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li {
+#nav li {
     display: inline;
+
 }
 
-li a {
+#nav li a {
 	font-family: 'Arvo', serif;
-	font-size: 20px;
+	font-size: 25px;
     color: #303030;
     text-decoration: none;
     margin-right: 20px;
   
 }
+
+#events {
+    list-style-type: none;
+    margin: 0 0 0 -40x;
+    padding: 0;
+
+}
+
+#events p {
+	font-size: 10px;
+}
+
 
 
 #wrap {
