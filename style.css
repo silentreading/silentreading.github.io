@@ -4,6 +4,31 @@ body {
     color: #303030;
 }
 
+#wrap {
+	width:1100px;
+}
+
+#header {}
+
+
+
+#main {
+	float:left;
+	width:620px;
+	}
+
+#nav {}
+
+#events {
+	float:right;
+	width:460px;
+	padding: 10px;
+	list-style-type: none;
+    margin: 0 0 0 -40px;
+    padding: 0;
+
+}
+
 
 h1 {font-family: 'Arvo', serif;
 	font-size: 80px;
@@ -11,16 +36,21 @@ margin: 0;
     padding: 0;}
 
 h2 {font-family: 'Arvo', serif;
-	font-size: 25px
+	font-size: 25px;
+	margin: 0;
+    padding: 0;
 	}
 
 h3 {font-family: 'Arvo', serif;
-	font-size: 15px
+	font-size: 15px;
+	margin: 0;
+
 	}
 
 h4 {font-family: 'Sanchez', serif;
 	font-style: italic;
 	font-size: 12px;
+	margin: 0;
 	}
 
 
@@ -44,29 +74,14 @@ h4 {font-family: 'Sanchez', serif;
   
 }
 
-#events {
-    list-style-type: none;
-    margin: 0 0 0 -40x;
-    padding: 0;
 
-}
 
 #events p {
 	font-size: 10px;
 }
 
-
-
-#wrap {
-	width:1000px;
+#events li {
+	padding: 10px 0 0 0;
 }
 
-#main {
-	width:63%;
-	float:left;
-}
 
-#events {
-	width:37%;
-	float:right;
-}
